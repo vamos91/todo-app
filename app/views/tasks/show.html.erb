@@ -1,0 +1,11 @@
+<h1>Tasks#show</h1>
+<h2><%= @task.name %></h2>
+<p><%= @task.description %></p>
+
+<p><%= link_to "afficher l'ensemble des tache a faire",tasks_path %></p>,
+
+<%= link_to "Delete", task_path(@task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+
+<%= link_to "Modify", edit_task_path(@task.id)%>
